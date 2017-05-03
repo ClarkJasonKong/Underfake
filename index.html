@@ -20,6 +20,11 @@ var moveLeft
 var moveRight
 var moveSpace
 
+var maxRpr = 2
+var minRpr = 0
+var rainDropsX = new Array()
+var rainDropsY = new Array()
+
 document.onkeydown = keyDown;
 document.onkeyup = keyUp
 
@@ -33,8 +38,16 @@ function gameInit(){
 	isRed = true
 	gameLoop()
 }
+function addRain(){
+	for( var i = 0; i< Math.floor((Math.random() * maxRpr) + minRpr); i++){
+		rainDropsX.push(Math.floor(Math.random() * screenWidth))
+		rainDropsY.push(0)
+	}
+}
 function gameLoop(){
 	gameUpdate()
+	addRain()
+	drawRain()
 	drawPlayer()
 	setTimeout(gameLoop, 10)
 }
@@ -97,6 +110,12 @@ function keyUp(event){
 }
 
 function gameUpdate(){
+	yLen = rainDropsY.length
+	for(var i = 0; i < yLen ; i++){
+		rainDropsY[i]+=10;
+	}
+
+
 	if (isRed){
 		moveSpace = 10
 		boxWidth = 20
@@ -131,7 +150,6 @@ function gameUpdate(){
 	}
 }
 function drawPlayer(){
-	drawBG()
 	if (isRed)
 		context.fillStyle = "red"
 	else if (isBlue)
@@ -142,7 +160,14 @@ function drawPlayer(){
 		context.fillStyle = "green"
 	context.fillRect(posX, posY, boxWidth, boxHeight)
 }
+function drawRain(){
+	drawBG()
+	for(var i=0; i< rainDropsY.length ; i++){
+		context.fillStyle = "blue"
+		context.fillRect(rainDropsX[i], rainDropsY[i], 10, 10)
+	}
 
+}
 function drawBG(){
 	context.fillStyle = "black"
 	context.fillRect(0, 0, screenWidth, screenHeight)
