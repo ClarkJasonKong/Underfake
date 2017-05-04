@@ -102,15 +102,3 @@ function keyUp(event){
 	}
 	
 }
-
-/*<html>
-<head>
-	<style>
-		html, body{ width: 100%; height:100%; margin:0; } canvas{display: block; position: absolute; top:0; left:0; right:0; bottom:0; width:100%; height:100%}
-	</style>
-</head>
-<body>
-<canvas id= "message" width="1920" height="955"></canvas>
-<script type="text/javascript" src ="message.js"></script>
-</body>
-</html>*/
