@@ -3,6 +3,7 @@
 	box-sizing: border-box;
 }
 
+
 body {
 	padding: 0;
 	margin: 0;
@@ -12,6 +13,7 @@ body {
 	text-transform: uppercase;
 	color: #000;
 }
+
 
 .section {
 	text-align: center;
@@ -99,8 +101,27 @@ body {
 }
 
 #ghost{
-	width: 412px; height: 612px;
+	width: 30vw; height: 78vh;
 	margin: auto;
-	background-size: auto;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 	background-image: url("../imgs/ghost.jpg");
+}
+
+.linebreak{
+	display: block;
+  	margin-top: -15px;
+}
+@media only screen and (max-width: 600px) {
+  body {
+	font-size: 6vw;
+  }
+  #ghost{
+	width: 100vw; height: 80vh;
+  }
+  .linebreak{
+  	display: block;
+  	margin-top: 10px;
+  }
 }
