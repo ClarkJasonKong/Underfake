@@ -1,134 +1,106 @@
-@font-face{
-   font-family: montserrat; 
-   src: url(../fonts/Montserrat-Bold.ttf)
- }
-@font-face{
-   font-family: opensans; 
-   src: url(../fonts/OpenSans-Regular.ttf)
- }
- @font-face{
-   font-family: adventpro; 
-   src: url(../fonts/AdventPro-Regular.ttf)
- }
-
-::-webkit-scrollbar { 
-    display: none; 
+@import 'https://fonts.googleapis.com/css?family=Sintony';
+* {
+	box-sizing: border-box;
 }
 
-@-moz-document url-prefix() {
-    html,body{
-		scrollbar-width: none;
-    }
-}
-
-*{
+body {
 	padding: 0;
 	margin: 0;
-}
- html, body{
-	width: 100vw; height: 100vh;
-	scroll-behavior: smooth;
-}
-
-body{
-	background: rgb(210,77,87);
-	color: rgb(138,7,7);
-	
-}
-.bottomBlurBlack{
-	width: 100vw;
-	height: 100vh;
-	background: linear-gradient(to bottom, rgba(52,46,46,0.2),  rgb(52,46,46));
-}
-.topBlurBlack{
-	width: 100vw;
-	height: 100vh;
-	background: linear-gradient(to top, rgba(52,46,46,0.2),  rgb(52,46,46));
+	font-family: 'Sintony', sans-serif;
+	font-weight: 300;
+	font-size: 1.6vw;
+	text-transform: uppercase;
+	color: #000;
 }
 
-
-.bottomBlurRed{
-	width: 100vw;
-	height: 100vh;
-	background: linear-gradient(to bottom, rgba(138,7,7,0),  rgb(138,7,7));
-}
-.topBlurRed{
-	width: 100vw;
-	height: 90vh;
-	background: linear-gradient(to top, rgba(138,7,7,0.1),  rgb(138,7,7));
-}
-
-.bottomBlurPink{
-	width: 100vw;
-	height: 90vh;
-	background: linear-gradient(to bottom, rgba(210,77,87,0),  rgb(210,77,87));
-}
-
-header, #art_3d, #about{
-	width: 100vw;
-  	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-  	background-size: cover;
-}
-
-header{
-	height: 100vh;
-	background-image: url("../imgs/me.jpg");
-}
-
-/*#nav_bar{
-	width: 100vw;
-	display: flex;
-	justify-content: space-evenly;
-}
-a{
-	width: 25vw;
-	font-family: adventpro;
-	color: white;
-	font-size: 2vw;
-	text-decoration: none;
+.section {
 	text-align: center;
-}
-*/
-#headerText{
-	width: 100vw;
-
-	font-family: montserrat;
-	font-size: 13vw;
-	color: white;
-	text-align: center;
-	padding-top: 30vh; 
-}
-
-.section{
-	color: white;
-	width: 100vw;
-	/*background-color: rgb(210,77,87);*/
-	background-color: rgb(52,46,46);
-	font-size: 1vw;
-
-}
-.sectionHeader{
-	font-family: adventpro;
-	font-size: 4.5vw;
-	text-align: center;
-}
-
-#pro_game{
-	 height: 60vh;
-	/*background-color: red;*/
-}
-#art_3d{
+	position: absolute;
+	width: 100%;
 	height: 100vh;
-	/*background-color: order: ange;*/
-	background-image: url("../imgs/arcanine.jpg");
+	letter-spacing: 4px;
+	overflow: hidden;
+	clip: rect(0, auto, auto, 0);
+
+	color: #fff;
+	/*top: (100vh * (1 - 1));*/	
 }
-#writing{
-	height: 60vh;
-	background-color: rgb(138,7,7);
+.fixed {
+	overflow: hidden;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}	
+
+
+#child_1{
+	background-color: rgb(0, 0, 0 );
+	color: rgb(180, 180, 180);
+	z-index: 1;
+	top: 0;
 }
-#about{
-	height: 90vh;
-	background-image: url("../imgs/me2.jpg");
+
+#child_2{
+	background-color: rgb(25,25,25);
+	color: rgb(180, 180, 180);
+	z-index: 2;
+	top: 100vh;
+}
+#child_3{
+	background-color: rgb(50,50,50);
+	color: rgb(180, 180, 180);
+	z-index: 3;
+	top: 200vh;
+}
+#child_4{
+	background-color: rgb(75,75,75);
+	color: rgb(180, 180, 180);
+	z-index: 4;
+	top: 300vh;
+}
+#child_5{
+	background-color: rgb(100,100,100);
+	color: rgb(180, 180, 180);
+	z-index: 5;
+	top: 400vh;
+}
+#child_6{
+	background-color: rgb(125,125,125);
+	color: rgb(75, 75, 75);
+	z-index: 6;
+	top: 500vh;
+}
+#child_7{
+	background-color: rgb(150,150,150);
+	color: rgb(75, 75, 75);
+	z-index: 7;
+	top: 600vh;
+}
+#child_8{
+	background-color: rgb(175,175,175);
+	color: rgb(75, 75, 75);
+	z-index: 8;
+	top: 700vh;
+}
+
+#child_9{
+	background-color: rgb(200,200,200);
+	color: rgb(75, 75, 75);
+	z-index: 9;
+	top: 800vh;
+}
+
+#child_10{
+	background-color: rgb(255,255,255);
+	color: rgb(75, 75, 75);
+	z-index: 10;
+	top: 900vh;
+}
+
+#ghost{
+	width: 412px; height: 612px;
+	margin: auto;
+	background-size: auto;
+	background-image: url("../imgs/ghost.jpg");
 }
